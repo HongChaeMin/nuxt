@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>declarative rendering</title>
+</head>
+<body>
+    <!-- https://v3.ko.vuejs.org/guide/introduction.html#%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8C%E1%85%A1-%E1%84%8B%E1%85%B5%E1%86%B8%E1%84%85%E1%85%A7%E1%86%A8-%E1%84%92%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%86%BC -->
+    <div id="event-handling">
+        <p>{{ message }}</p>
+        <!-- 메소드를 호출하는 이벤트 리스너 추가 -->
+        <button v-on:click="reverseMessage">Reverse Message</button>
+    </div>
+
+    <script>
+        const EventHandling = {
+            data() {
+                return {
+                    message: 'Hello Vue.js!'
+                }
+            },
+            methods: {
+                reverseMessage() {
+                    this.message = this.message
+                    .split('')
+                    .reverse()
+                    .join('')
+                }
+            }
+        }
+
+        Vue.createApp(EventHandling).mount('#event-handling')
+    </script>
+
+</body>
+</html>
