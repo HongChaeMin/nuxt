@@ -13,6 +13,12 @@
         <button v-on:click="reverseMessage">Reverse Message</button>
     </div>
 
+    <div id="two-way-binding">
+        <p>{{ message }}</p>
+        <!-- 양식에 대한 입력과 앱 상태를 양방향으로 바인딩 -->
+        <input v-model="message" />
+    </div>
+
     <script>
         const EventHandling = {
             data() {
@@ -30,7 +36,16 @@
             }
         }
 
+        const TwoWayBinding = {
+            data() {
+                return {
+                    message: 'Hello Vue!'
+                }
+            }
+        }
+
         Vue.createApp(EventHandling).mount('#event-handling')
+        Vue.createApp(TwoWayBinding).mount('#two-way-binding')
     </script>
 
 </body>
