@@ -1,4 +1,4 @@
-# main
+# github-pages
 
 > Nuxt.js project
 
