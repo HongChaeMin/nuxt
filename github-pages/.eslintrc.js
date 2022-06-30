@@ -1,21 +1,37 @@
 module.exports = {
   root: true,
+
   env: {
-    browser: true,
-    node: true
+    node: true,
   },
+
+  plugins: ['vuetify'],
+
+  extends: 'vuetify',
+
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
   },
-  extends: [
-    // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
-    // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-    'plugin:vue/essential'
+
+  rules: {
+    'no-console': 'off',
+    'no-debugger': 'off',
+    // https://github.com/babel/babel-eslint/issues/681#issuecomment-420663038
+    'template-curly-spacing': 'off',
+    indent: 'off',
+    //
+    'no-unused-vars': 'warn',
+  },
+
+  overrides: [
+    {
+      files: [
+        '**/__tests__/*.{j,t}s?(x)',
+        '**/tests/unit/**/*.spec.{j,t}s?(x)',
+      ],
+      env: {
+        jest: true,
+      },
+    },
   ],
-  // required to lint *.vue files
-  plugins: [
-    'vue'
-  ],
-  // add your custom rules here
-  rules: {}
 }
