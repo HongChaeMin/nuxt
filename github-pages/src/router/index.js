@@ -20,21 +20,14 @@ const router = new Router({
   },
   routes: [
     layout('Default', [
-      route('Dashboard'),
+      route('Java', null, 'step/java'),
+      route('UserProfile', null, 'step/my-sql'),
+      route('Notifications', null, 'step/spring-boot'),
+      route('Icons', null, 'step/spring-data-jpa'),
 
-      // Pages
-      route('UserProfile', null, 'components/profile'),
-
-      // Components
-      route('Notifications', null, 'components/notifications'),
-      route('Icons', null, 'components/icons'),
-      route('Typography', null, 'components/typography'),
-
-      // Tables
+      /* route('Typography', null, 'components/typography'),
       route('Regular Tables', null, 'tables/regular'),
-
-      // Maps
-      route('Google Maps', null, 'maps/google'),
+      route('Google Maps', null, 'maps/google'), */
     ]),
   ],
 })

@@ -249,7 +249,7 @@
     mixins: [Proxyable],
 
     data: () => ({
-      color: '#E91E63',
+      color: '#4CAF50',
       colors: [
         '#9C27b0',
         '#00CAE3',
@@ -280,7 +280,7 @@
 
     watch: {
       color (val) {
-        this.$vuetify.theme.themes[this.isDark ? 'dark' : 'light'].primary = val
+        this.$vuetify.theme.themes[this.isDark ? 'light' : 'light'].primary = val
       },
     },
   }
@@ -297,5 +297,5 @@
       border-color: transparent !important
 
       &--active
-        border-color: #00cae3 !important
+        border-color: #4CAF50 !important
 </style>

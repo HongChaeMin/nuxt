@@ -24,12 +24,6 @@
 
     <v-spacer />
 
-    <default-search class="hidden-sm-and-down" />
-
-    <default-go-home />
-
-    <default-notifications />
-
     <default-account />
   </v-app-bar>
 </template>
@@ -50,17 +44,9 @@
         /* webpackChunkName: "default-drawer-toggle" */
         './widgets/DrawerToggle'
       ),
-      DefaultGoHome: () => import(
-        /* webpackChunkName: "default-go-home" */
-        './widgets/GoHome'
-      ),
       DefaultNotifications: () => import(
         /* webpackChunkName: "default-notifications" */
         './widgets/Notifications'
-      ),
-      DefaultSearch: () => import(
-        /* webpackChunkName: "default-search" */
-        './widgets/Search'
       ),
     },
 

@@ -9,11 +9,10 @@
   import '@/styles/overrides.sass'
 
   export default {
-    name: 'App',
+    name: 'github-pages',
     metaInfo: {
-      title: 'App',
-      titleTemplate: '%s | Material Dashboard Free',
-      htmlAttrs: { lang: 'en' },
+      title: 'Hannah | backend',
+      htmlAttrs: { lang: 'ko' },
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

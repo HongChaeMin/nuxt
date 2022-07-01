@@ -4,30 +4,31 @@ import { make } from 'vuex-pathify'
 // Data
 const state = {
   drawer: null,
-  drawerImage: true,
+  drawerImage: false,
   mini: false,
+  color: '#4CAF50',
   items: [
     {
-      title: 'Dashboard',
+      title: 'Java',
       icon: 'mdi-view-dashboard',
-      to: '/',
+      to: '/step/java/',
     },
     {
-      title: 'User Profile',
-      icon: 'mdi-account',
-      to: '/components/profile/',
+      title: 'MySQL',
+      icon: 'mdi-chart-bubble',
+      to: '/step/my-sql/',
     },
     {
-      title: 'Regular Tables',
+      title: 'Spring Boot',
       icon: 'mdi-clipboard-outline',
-      to: '/tables/regular/',
+      to: '/step/spring-boot/',
     },
     {
-      title: 'Typography',
+      title: 'Spring Data Jpa',
       icon: 'mdi-format-font',
-      to: '/components/typography/',
+      to: '/step/spring-data-jpa/',
     },
-    {
+    /* {
       title: 'Icons',
       icon: 'mdi-chart-bubble',
       to: '/components/icons/',
@@ -41,7 +42,7 @@ const state = {
       title: 'Notifications',
       icon: 'mdi-bell',
       to: '/components/notifications/',
-    },
+    }, */
   ],
 }
 
